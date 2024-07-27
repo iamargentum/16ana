@@ -5,10 +5,10 @@ import { transact } from './transaction';
 
 const get_secret_key_from_string = (secret_key_string: string) => {
     return secret_key_string
-        .replace("[", "")
-        .replace("]", "")
-        .split(",")
-        .map(s => parseInt(s));
+        .replace("[", "") // remove the starting "[" from the array string
+        .replace("]", "") // remove ending "]" from the array string
+        .split(",") // split the elements separated by ","
+        .map(s => parseInt(s)); // convert elements to integer
 }
 
 yargs(hideBin(process.argv))

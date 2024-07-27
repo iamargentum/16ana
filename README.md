@@ -8,29 +8,32 @@ This is my submission for Assignment 1 in the Solana Summer Fellowship. This is 
 
 # Setup
 
-This project is created using Bun, but you can use Node+npm or Deno run this project.
+This project is created using Bun, but you can use Node+npm or Deno to run this project.
 
 ## Install dependencies
 
-    ```bash
+    ```sh
     bun install
     ```
 
 ## Run
 
 Before running the `16ana` CLI app, you need to register it. Run the following commands to register the CLI application.
-    ```bash
+    
+    ```sh
     bun link
     bun link 16ana
     ```
 
 To make sure the application was registered successfully, run
-    ```bash
+    
+    ```sh
     16ana --version
     ```
 
 The output should look something like this -
-    ```bash
+    
+    ```sh
     1.0.0
     ```
 
@@ -39,23 +42,27 @@ Now, let's look into all the commands that this application offers us.
 ### Creating a keypair
 
 You can use the following command to create a keypair -
-    ```bash
+    
+    ```sh
     16ana keypair
     ```
 This command will print the public key of the created keypair.
 If you wish to get the private key printed on the terminal, use the `-s` or `--show-secret` flag.
-    ```bash
+    
+    ```sh
     16ana keypair --show-secret
     ```
 
 ### Getting public key from private key
 
 We can get the public key from a private key that we already have using the `--from-secret` option on `keypair` command -
-    ```bash
+    
+    ```sh
     16ana keypair --from-secret="<private-key>"
     ```
 Example:
-    ```bash
+    
+    ```sh
     16ana keypair --from-secret="[ 1, 70, 69, 248, 202, 4, 159, 251, 181, 40, 86, 45, 109, 94, 65, 139, 65, 9, 36, 45, 29, 91, 19, 90, 107, 189, 40, 247, 4, 178, 226, 62, 253, 111, 98, 230, 123, 175, 14, 241, 154, 146, 187, 1, 25, 5, 91, 161, 53, 111, 18, 187, 107, 112, 218, 50, 192, 222, 37, 218, 18, 11, 176, 255 ]"
     ```
 #### Note
@@ -64,7 +71,8 @@ Make sure to wrap your private key in double or single quotes.
 ### Creating an airdrop
 
 Use the `request-airdrop` command along with options `--wallet-address` and `--sols` to specify receiver's address and number of sols respectively.
-    ```bash
+    
+    ```sh
     16ana request-airdrop --wallet-address=<receiver-wallet-address> --sols=<number-of-sols>
     ```
 This command creates an airdrop and returns a transaction ID, which can be queried later for transaction status.
@@ -72,7 +80,8 @@ This command creates an airdrop and returns a transaction ID, which can be queri
 ### Creating a transfer
 
 A transfer can be created using the `transfer` command with options `--payer-secret`, `--to` and `--sols` to specify sender's secret key, receiver's public key (address) and the number of sols to be transfered.
-    ```bash
+    
+    ```sh
     16ana transfer --payer-secret="<payer-secret-key>" --to=<receiver-public-key> --sols=<number-of-sols-to-be-transfered>
     ```
 

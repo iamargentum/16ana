@@ -82,3 +82,7 @@ A transfer can be created using the `transfer` command with options `--payer-sec
 
 # Why the name "16ana"?
 16 in Hindi is Solah. So 16ana becomes "Solah"-ana. I know this is not much, but this is as creative as I can get. Haha.
+
+# Credits
+- I don't really know `bun` and `typescript`, but thanks to [this](https://balamurugan16.hashnode.dev/blazingly-fast-cli-with-bun) blog for a great intro to `bun` and building CLI apps with it.
+- Thanks to Kunal for session 1 where he introduced us to transactions on Solana!

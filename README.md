@@ -53,8 +53,6 @@ If you wish to get the private key printed on the terminal, use the `-s` or `--s
 16ana keypair --show-secret
 ```
 
-----
-
 ### Getting public key from private key
 
 We can get the public key from a private key that we already have using the `--from-secret` option on `keypair` command -
@@ -77,8 +75,6 @@ Example:
 
 Make sure to wrap your private key in double or single quotes.
 
-----
-
 ### Creating an airdrop
 
 Use the `request-airdrop` command along with options `--wallet-address` and `--sols` to specify receiver's address and number of sols respectively.
@@ -88,8 +84,6 @@ Use the `request-airdrop` command along with options `--wallet-address` and `--s
 ```
 This command creates an airdrop and returns a transaction ID, which can be queried later for transaction status.
 
-----
-
 ### Creating a transfer
 
 A transfer can be created using the `transfer` command with options `--payer-secret`, `--to` and `--sols` to specify sender's secret key, receiver's public key (address) and the number of sols to be transfered.
@@ -97,8 +91,6 @@ A transfer can be created using the `transfer` command with options `--payer-sec
 ```sh
 16ana transfer --payer-secret="<payer-secret-key>" --to=<receiver-public-key> --sols=<number-of-sols-to-be-transfered>
 ```
-
-----
 
 # Miscellaneous stuff
 - The `devnet` seems to have quite aggressive rate limiting, so in case your limit is expired, uncomment line #4 in `transactions.ts` and comment out line #3 in the same file to make the app point to `localnet`, in case you have a running localnet.

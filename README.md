@@ -23,7 +23,7 @@ Before running the `16ana` CLI app, you need to register it. Run the following c
 ```sh
 bun link
 bun link 16ana
-    ```
+```
 
 To make sure the application was registered successfully, run
     
